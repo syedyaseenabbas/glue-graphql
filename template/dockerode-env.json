@@ -1,0 +1,18 @@
+{
+	"Image": "hasura/graphql-engine",
+	"WorkingDir": "/hasura",
+	"Env": {
+		"HASURA_GRAPHQL_METADATA_DATABASE_URL": "postgres://postgres:goldtree9@host.docker.internal:5432/bps",
+		"PG_DATABASE_URL": "postgres://postgres:goldtree9@host.docker.internal:5432/bps",
+		"HASURA_GRAPHQL_ENABLE_CONSOLE": "true",
+		"HASURA_GRAPHQL_DEV_MODE": "true",
+		"HASURA_GRAPHQL_ENABLED_LOG_TYPES": "startup, http-log, webhook-log, websocket-log, query-log",
+		"HASURA_GRAPHQL_ADMIN_SECRET": "secret",
+		"HASURA_GRAPHQL_JWT_SECRET": {"type": "HS256", "key": "f7eb8518-a85e-45f1-983d-43ae8b5f92d7"},
+		"HASURA_GRAPHQL_UNAUTHORIZED_ROLE": "anonymous"
+	},
+	"ContainerPort": "8080/tcp",
+	"HostPort": "8080",
+	"ExposedPorts":"8080/tcp",
+	"name": "hasura"
+}

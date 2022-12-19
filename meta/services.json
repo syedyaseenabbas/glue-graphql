@@ -1,0 +1,12 @@
+[
+  {
+    "name": "meta",
+    "directory": "meta",
+    "type": "default"
+  },
+  {
+    "name": "graphql",
+    "directory": "template",
+    "type": "app"
+  }
+]

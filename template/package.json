@@ -1,0 +1,17 @@
+{
+  "name": "hasura",
+  "description": "",
+  "scripts": {
+    "start:docker": "docker-compose -f docker-compose.override.yml up",
+    "start:console": "hasura console  --admin-secret=secret",
+    "up:console": "npm run apply:metadata && npm run apply:migrate && npm run clear:metadata && npm run apply:metadata",
+    "apply:metadata": "hasura metadata apply --admin-secret=secret",
+    "apply:migrate": "hasura migrate apply --admin-secret=secret --database-name=metroghar",
+    "clear:metadata": "hasura metadata clear --admin-secret=secret",
+    "status:migrate": "hasura migrate status --admin-secret=secret",
+    "export:metadata": "hasura metadata export --admin-secret=secret",
+    "list:metadata": "hasura metadata ic list --admin-secret=secret",
+    "apply:seeds": "hasura seed apply  --admin-secret=secret",
+    "create:migrate": "hasura migrate create --admin-secret=secret --database-name=\"metroghar\" --schema=public"
+  }
+}
